@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Poppins } from "next/font/google";
 
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { PlusCircle } from "lucide-react";
 
 const font = Poppins({
     subsets: ["latin"],
@@ -20,6 +22,10 @@ export const Logo = () => {
             <p className={cn("font-semibold", font.className)}>
                 Notion Clone
             </p>
+            <Button>
+                <PlusCircle className="h-4 w-4 mr-2" />
+                Create a note
+            </Button>
         </div>
     )
 }

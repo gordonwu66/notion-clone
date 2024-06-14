@@ -6,6 +6,7 @@ import { MenuIcon } from "lucide-react";
 import { useMediaQuery } from "usehooks-ts";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export const Navigation = () => {
     const isMobile = useMediaQuery("(max-width: 768px)");
@@ -106,7 +107,9 @@ export const Navigation = () => {
                     <p>Action items</p>
                 </div>
                 <div className="mt-4">
-                    <p>Documents</p>
+                    <Link href="/documents/test">
+                        Documents
+                    </Link>
                 </div>
                 <div 
                     onMouseDown={handleMouseDown}
