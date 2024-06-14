@@ -2,6 +2,8 @@
 
 import { useScrollTop } from "@/hooks/use-scroll-top";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const Navbar = () => {
     const scrolled = useScrollTop();
@@ -12,7 +14,11 @@ export const Navbar = () => {
             scrolled && "border-b shadow-sm"
         )}>
             <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
-                Login
+                <Button variant="ghost" size="sm" asChild>
+                    <Link href="/documents">
+                        Enter Notion Clone
+                    </Link>
+                </Button>
             </div>
         </div>
     )
